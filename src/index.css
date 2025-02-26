@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @theme {
   --font-size-title: 1.25rem;
   --font-size-body: 1.125rem;
@@ -6,11 +6,11 @@
   --font-title: Montserrat, sans-serif;
   --font-body: Poppins, sans-serif;
 
-  --color-background: #0D1B2A;
-  --color-txt-light: #E6E6E6;
-  --color-primary: #F57B7A;
-  --color-secondary: #82A7A6;
-  --color-accent: #2EC4B6;
+  --color-background: #0d1b2a;
+  --color-txt-light: #e6e6e6;
+  --color-primary: #f57b7a;
+  --color-secondary: #82a7a6;
+  --color-accent: #2ec4b6;
   --color-topBar: #1c1c1ebe;
 }
 
