@@ -18,6 +18,10 @@ body {
   background-color: #0d1b2a;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 section {
-  @apply px-6 py-4 md:px-12 lg:px-20 xl:px-32 2xl:px-40 w-full;
+  @apply px-6 py-6 w-full sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-40;
 }
