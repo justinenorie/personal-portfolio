@@ -1,5 +1,13 @@
 import PropTypes from 'prop-types';
 
+/**
+ * Typography component for creating text headings and paragraphs.
+ * @param {String} variant The type of heading styles to render
+ * @param {String} children The text to be displayed or rendered
+ * @param {String} className for custome styles classnames to be applied to the component
+ * @returns {ReactElement} results to be displayed
+*/
+
 const Typography = ({ variant, children, className = '' }) => {
   const baseStyles = {
     h1: 'text-3xl sm:text-4xl md:text-5xl font-bold font-title',
