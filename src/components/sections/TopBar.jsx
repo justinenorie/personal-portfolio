@@ -1,37 +1,43 @@
-function TopBar() {
+import Typography from '../ui/Typography';
+
+const TopBar = () => {
   return (
-    <section className="bg-topBar h-16 text-text flex items-center justify-between px-12">
-      <a
-        href="#"
-        className="font-bold text-title hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-primary from-20% via-accent via-47% to-secondary to-90% animate-bounce"
-      >
-        Norie.
-      </a>
-      <div className="flex-1 flex justify-center text-body">
-        <nav className="flex gap-36">
-          <a
-            href="#"
-            className="hover:text-primary transform hover:scale-150 transition-transform duration-500 relative group"
+    <section className="fixed top-0 left-0 right-0">
+      <div className="border rounded-lg h-16 text-text flex items-center px-12 justify-between bg-topBar-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-gray-100">
+        {/* TODO: Name with Icon  */}
+        <div className="flex flex-row gap-1">
+          <img src="/sample-logo.svg" alt="logo" />
+          <Typography
+            variant="h3"
+            className="text-txt-light self-center hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-primary from-20% via-accent via-47% to-secondary to-90%"
           >
-            About
-          </a>
+            <a href="#">Norie.</a>
+          </Typography>
+        </div>
 
-          <a
-            href="#"
-            className="hover:text-primary transform hover:scale-150 transition-transform duration-500 relative group"
-          >
-            Projects
-          </a>
+        {/* TODO: Navigation Links */}
+        <div className="text-txt-light">
+          <nav className="flex gap-24">
+            <Typography variant="p" className="hover:text-primary">
+              <a href="#">Stacks</a>
+            </Typography>
 
-          <a
-            href="#"
-            className="hover:text-primary transform hover:scale-150 transition-transform duration-500 relative group"
-          >
-            Contact
-          </a>
-        </nav>
+            <Typography variant="p" className="hover:text-primary">
+              <a href="#">Projects</a>
+            </Typography>
+
+            <Typography variant="p" className="hover:text-primary">
+              <a href="#">Experiences</a>
+            </Typography>
+
+            <Typography variant="p" className="hover:text-primary">
+              <a href="#">Contacts</a>
+            </Typography>
+          </nav>
+        </div>
       </div>
+      {/* </div> */}
     </section>
   );
-}
+};
 export default TopBar;
