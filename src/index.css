@@ -8,6 +8,7 @@
 
   --color-background: #0d1b2a;
   --color-txt-light: #e6e6e6;
+  --color-txt-dark: #1a1a1a;
   --color-primary: #f57b7a;
   --color-secondary: #82a7a6;
   --color-accent: #2ec4b6;
@@ -23,5 +24,25 @@ html, body {
 }
 
 section {
-  @apply px-6 py-6 w-full sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-40;
+  @apply px-4 py-10 w-full md:px-12 lg:px-30 xl:px-50;
+}
+
+/* Animation Styling */
+@layer utilities {
+  @keyframes gradient-animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-animate 3s linear infinite;
+  }
 }
