@@ -20,7 +20,7 @@ const Button = ({ children, className = '', variant = 'primary', ...props }) => 
   return (
     <button
       type="button"
-      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md ${className}`}
+      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md transition-transform duration-300 hover:scale-110 cursor-pointer ${className}`}
       {...props}
     >
       {children}
@@ -35,3 +35,4 @@ Button.propTypes = {
 };
 
 export default Button;
+
