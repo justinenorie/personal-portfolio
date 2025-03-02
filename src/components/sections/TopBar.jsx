@@ -2,8 +2,8 @@ import Typography from '../ui/Typography';
 
 const TopBar = () => {
   return (
-    <section className="fixed top-0 left-0 right-0">
-      <div className="border rounded-lg h-16 text-text flex items-center px-12 justify-between bg-topBar-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-gray-100">
+    <section className="fixed top-0 left-0 right-0 z-50">
+      <div className="border rounded-lg h-16 text-text flex items-center px-8 justify-between bg-cards-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-gray-100">
         {/* TODO: Name with Icon  */}
         <div className="flex flex-row gap-1">
           <img src="/sample-logo.svg" alt="logo" />
@@ -16,27 +16,27 @@ const TopBar = () => {
         </div>
 
         {/* TODO: Navigation Links */}
-        <div className="text-txt-light">
-          <nav className="flex gap-24">
+        <div className="text-txt-light hidden md:block">
+          <nav className="flex gap-4 md:gap-8 lg:gap-16 xl:gap-24">
             <Typography variant="p" className="hover:text-primary">
-              <a href="#">Stacks</a>
+              <a href="#stacks">Stacks</a>
             </Typography>
 
             <Typography variant="p" className="hover:text-primary">
-              <a href="#">Projects</a>
+              <a href="#projects">Projects</a>
             </Typography>
 
             <Typography variant="p" className="hover:text-primary">
-              <a href="#">Experiences</a>
+              <a href="#experiences">Experiences</a>
             </Typography>
 
             <Typography variant="p" className="hover:text-primary">
-              <a href="#">Contacts</a>
+              <a href="#contacts">Contacts</a>
             </Typography>
+            {/*TODO: Add Light and Dark Mode Toggle here */}
           </nav>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

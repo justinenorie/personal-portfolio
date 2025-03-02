@@ -4,8 +4,8 @@ import tech from '../../lib/tech';
 
 export default function Skills() {
   return (
-    <section>
-      <Typography variant="h3" className="text-txt-light mb-8">
+    <section id="stacks">
+      <Typography variant="h2" className="text-txt-light mb-8">
         My Tech Stacks
       </Typography>
 
@@ -16,6 +16,9 @@ export default function Skills() {
             Icon={item.icon}
             techName={item.name}
             color={item.color}
+            techStyle="bg-cards p-5 gap-5 items-center shadow-md transition-transform duration-300 hover:scale-110 group"
+            iconStyle="w-10 h-10 transition-transform duration-300 group-hover:rotate-[10deg] group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+            variant="p"
           />
         ))}
       </div>
