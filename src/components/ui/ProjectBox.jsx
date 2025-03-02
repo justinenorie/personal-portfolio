@@ -11,9 +11,9 @@ const ProjectBox = ({ image, projectName, description, techStacks }) => {
     .filter(Boolean); // Remove undefined values (if no match)
 
   return (
-    <div className="grid grid-cols-2 gap-10 border-2 border-txt-light p-5 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+    <div className="grid md:grid-cols-2 gap-10 border-2 border-txt-light p-5 items-center rounded-3xl shadow-md transition-transform duration-300 hover:scale-105">
       <img
-        className="w-full h-80 object-cover rounded-md"
+        className="w-full h-80 object-cover rounded-2xl"
         src={image || '/Rectangle.svg'}
         alt={projectName}
       />
@@ -26,7 +26,7 @@ const ProjectBox = ({ image, projectName, description, techStacks }) => {
           {description || 'Description'}
         </Typography>
 
-        <div className="flex gap-2 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 min-[70rem]:grid-cols-3 min-[100rem]:grid-cols-4 gap-2 mt-2">
           {matchedTechStacks.map((tech, index) => (
             <TechStacks
               key={index}

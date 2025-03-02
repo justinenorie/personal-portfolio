@@ -5,7 +5,7 @@ const projects = [
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis quam nec nisi ultrices, quis aliquet tortor dictum. Nam sed vestibulum magna. Nulla varius odio et sapien efficitur, id varius mauris gravida. ",
     githubLink: "Link in Github Here",
     webAppURL: "Link of the Actual Project",
-    techStacks: ["JavaScript", "NodeJS", "MongoDB"]
+    techStacks: ["JavaScript", "NodeJS", "MongoDB", "ReactJS"]
   },
   {
     image: "/Rectangle.svg",
