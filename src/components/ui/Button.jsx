@@ -20,7 +20,7 @@ const Button = ({ children, className = '', variant = 'primary', ...props }) => 
   return (
     <button
       type="button"
-      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md transition-transform duration-300 hover:scale-110 cursor-pointer ${className}`}
+      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md transition-transform duration-300 hover:scale-110 cursor-pointer focus:scale-110 active:scale-110 ${className}`}
       {...props}
     >
       {children}

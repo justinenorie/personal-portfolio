@@ -22,7 +22,7 @@ body {
 }
 
 section {
-  @apply px-4 py-10 w-full md:px-12 lg:px-30 xl:px-50;
+  @apply px-4 py-5 md:py-10 w-full md:px-12 lg:px-30 xl:px-50;
 }
 
 /* Animation Styling */

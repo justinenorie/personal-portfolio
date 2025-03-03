@@ -4,8 +4,8 @@ import { SiExpress, SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 const techStacks = [
-  { icon: FaHtml5, name: "HTML5", color: "#E34F26" },
-  { icon: FaCss3Alt, name: "CSS3", color: "#264de4" },
+  { icon: FaHtml5, name: "HTML", color: "#E34F26" },
+  { icon: FaCss3Alt, name: "CSS", color: "#254ADC" },
   { icon: IoLogoJavascript, name: "JavaScript", color: "#FFD600" },
   { icon: RiTailwindCssFill, name: "Tailwind CSS", color: "#38BDF8" },
   { icon: FaReact, name: "ReactJS", color: "#61DBFB" },
