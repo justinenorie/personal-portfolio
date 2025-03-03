@@ -7,9 +7,17 @@ export default function Projects() {
   return (
     <AnimatedDiv>
       <section id="projects">
-        <Typography variant="h2" className="text-txt-light mb-8">
-          Projects
-        </Typography>
+        <div className="mb-8 text-center grid gap-4">
+          <Typography variant="h2" className="text-txt-light">
+            Projects
+          </Typography>
+
+          <Typography variant="p" className="text-txt-light">
+            Here are some of the projects that I am proud to have built and
+            contributed to.
+          </Typography>
+        </div>
+
         <div className="grid gap-5">
           {projects.map((item, index) => (
             <AnimatedDiv key={index}>
