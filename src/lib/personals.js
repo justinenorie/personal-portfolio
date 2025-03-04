@@ -18,9 +18,15 @@ const myAccounts = [
   }
 ];
 
-const experience = [{
-
-}];
+const experience = [
+  {
+    position: "Full Stack Developer",
+    company: "Company",
+    duration: "July 2022 - November 2023",
+    location: "Philippines, Quezon City (Onsite)",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed at nisi sit amet justo malesuada porta. Etiam vitae magna eu augue tristique faucibus. Morbi at nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed at nisi sit amet justo malesuada porta. Etiam vitae magna eu augue tristique faucibus. "
+  },
+];
 
 const data = {
   myAccounts,

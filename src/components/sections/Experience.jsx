@@ -1,13 +1,19 @@
 import Typography from '../ui/Typography';
 import PropTypes from 'prop-types';
+import ExpCards from '../ui/ExpCards';
+import data from '../../lib/personals';
 
 export default function Experience({ className }) {
   return (
     <section id="experiences" className={className}>
-      <Typography variant="h2" className="text-txt-light">
+      <Typography variant="h2" className="text-txt-light mb-8">
         Experience
-        <div className="border-8"></div>
       </Typography>
+      <div className="grid gap-5">
+        {data.experience.map((item, index) => (
+          <ExpCards key={index} />
+        ))}
+      </div>
     </section>
   );
 }
