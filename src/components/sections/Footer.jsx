@@ -2,7 +2,7 @@ import Typography from '../ui/Typography';
 
 export default function Footer() {
   return (
-    <section id="contacts">
+    <section id="contacts" className="bg-black">
       <Typography variant="h2" className="text-txt-light">
         Footer
       </Typography>

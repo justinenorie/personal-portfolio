@@ -11,7 +11,14 @@ export default function Experience({ className }) {
       </Typography>
       <div className="grid gap-5">
         {data.experience.map((item, index) => (
-          <ExpCards key={index} />
+          <ExpCards
+            key={index}
+            position={item.position}
+            companyName={item.companyName}
+            duration={item.duration}
+            location={item.location}
+            description={item.description}  
+          />
         ))}
       </div>
     </section>
