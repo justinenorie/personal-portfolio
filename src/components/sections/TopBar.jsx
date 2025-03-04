@@ -3,11 +3,8 @@ import Typography from '../ui/Typography';
 const TopBar = () => {
   return (
     <section className="fixed top-0 left-0 right-0 z-50">
-      <div className="border rounded-lg h-16 text-text flex items-center px-8 justify-between bg-cards-700 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-gray-100">
-        {/* TODO: Name with Icon  */}
+      <div className="rounded-lg py-5 text-text flex items-center px-8 justify-between bg-cards/40 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
         <div className="flex flex-row gap-1">
-          {/* <img src="/sample-logo.svg" alt="logo" /> */}
-
           <a href="#" className="flex gap-1">
             <Typography
               variant="p"

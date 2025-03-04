@@ -22,7 +22,7 @@ const ProjectBox = ({
   const [isTouched, setIsTouched] = useState(false);
 
   return (
-    <div className="grid md:grid-cols-2 gap-10 border-2 border-txt-light p-5 items-center rounded-3xl shadow-md transition-transform duration-300 hover:scale-105">
+    <div className="grid md:grid-cols-2 gap-10 bg-cards p-5 items-center rounded-3xl shadow-md transition-transform duration-300 hover:scale-105">
       <a
         href={websiteLink}
         target="_blank"
@@ -76,7 +76,7 @@ const ProjectBox = ({
               Icon={tech.icon}
               techName={tech.name}
               color={tech.color}
-              techStyle="h-10 w-auto p-2 bg-cards rounded-md flex items-center gap-2 transition-transform duration-300 hover:scale-110 group"
+              techStyle="h-10 w-auto p-2 bg-cards border-1 border-accent rounded-3xl flex items-center gap-2 transition-transform duration-300 hover:scale-110 group"
               iconStyle="h-6 w-6 text-2xl transition-transform duration-300 group-hover:rotate-12"
               variant="small"
             />
