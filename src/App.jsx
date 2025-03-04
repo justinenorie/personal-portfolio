@@ -25,17 +25,25 @@ function App() {
     }
   }, []);
 
+  const sections = [HeroSection, Skills, Projects, Experience];
+
   return (
     <div>
       <TopBar />
-      <HeroSection />
-      <Skills />
-      <Projects />
-      <Experience />
+      {sections.map((Section, index) => (
+        <Section
+          key={index}
+          className={
+            index % 2 === 0
+              ? 'bg-background'
+              : 'bg-background-alt'
+          }
+        />
+      ))}
       <Footer />
       <motion.div
         ref={ref}
-        className="fixed h-30 w-30 blur-3xl bg-accent rounded-full shadow-lg -z-10"
+        className="fixed h-30 w-30 blur-3xl bg-accent rounded-full shadow-lg z-10"
         animate={{ x: coordinates.x, y: coordinates.y }}
         transition={{
           type: 'spring',
