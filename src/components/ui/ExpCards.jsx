@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import Typography from './Typography';
-import { RiArrowDropDownLine } from "react-icons/ri";
-
+import { RiArrowDropDownLine } from 'react-icons/ri';
+import { MdOutlineAccessTimeFilled } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 const ExpCard = ({
   image,
@@ -16,19 +17,19 @@ const ExpCard = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="rounded-3xl border-2 bg-cards shadow-lg border-txt-light p-6">
+    <div className="rounded-3xl content-center bg-cards shadow-lg p-6 hover:bg-cards/50">
       <div
-        className="flex justify-between items-center cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        className="flex justify-between items-center self-center cursor-pointer"
+        onClick={() => setIsOpen(prevState => !prevState)}
       >
         <div className="flex gap-6">
           <img
             src={image || '/Rectangle.svg'}
             alt={`${companyName}`}
-            className="w-12 h-12"
+            className="w-12 h-12 hidden sm:block"
           />
 
-          <div>
+          <div className="grid gap-1.5">
             <Typography variant="h3" className="text-txt-light">
               {position || 'Your Position'}
             </Typography>
@@ -36,11 +37,13 @@ const ExpCard = ({
               {companyName || 'Company Name'}
             </Typography>
 
-            <div className="flex gap-6 items-center mt-1">
-              <Typography variant="small" className="text-txt-light">
+            <div className="flex-col gap-6 items-center min-[57rem]:flex min-[57rem]:flex-row">
+              <Typography variant="small" className="text-txt-light flex gap-1.5 mb-1.5">
+                <MdOutlineAccessTimeFilled className="w-6 h-6 self-center text-primary"/>
                 {duration || 'January 1995 - December 1995'}
               </Typography>
-              <Typography variant="small" className="text-txt-light">
+              <Typography variant="small" className="text-txt-light flex gap-1.5">
+                <FaLocationDot className="w-6 h-6 self-center text-primary"/>
                 {location || 'Company Location'}
               </Typography>
             </div>
@@ -51,14 +54,7 @@ const ExpCard = ({
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <RiArrowDropDownLine 
-            className="text-txt-light w-20 h-20"
-          />
-          {/* <img
-            src={image || '/Rectangle.svg'}
-            alt={`${companyName}`}
-            className="w-12 h-12"
-          /> */}
+          <RiArrowDropDownLine className="text-txt-light w-20 h-20" />
         </motion.div>
       </div>
 
