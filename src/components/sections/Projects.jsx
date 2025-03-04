@@ -2,11 +2,12 @@ import Typography from '../ui/Typography';
 import ProjectsBox from '../ui/ProjectBox';
 import projects from '../../lib/projects';
 import AnimatedDiv from '../../utils/AnimatedDiv';
+import PropTypes from 'prop-types';
 
-export default function Projects() {
+export default function Projects({ className }) {
   return (
     <AnimatedDiv>
-      <section id="projects">
+      <section id="projects" className={className}>
         <div className="mb-8 text-center grid gap-4">
           <Typography variant="h2" className="text-txt-light">
             Projects
@@ -37,3 +38,7 @@ export default function Projects() {
     </AnimatedDiv>
   );
 }
+
+Projects.propTypes = {
+  className: PropTypes.string.isRequired,
+};

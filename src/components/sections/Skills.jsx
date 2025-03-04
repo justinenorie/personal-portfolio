@@ -2,10 +2,11 @@ import Typography from '../ui/Typography';
 import TechStacks from '../ui/TechStacks';
 import tech from '../../lib/tech';
 import AnimatedDiv from '../../utils/AnimatedDiv';
+import PropTypes from 'prop-types';
 
-export default function Skills() {
+export default function Skills({ className }) {
   return (
-    <section id="stacks">
+    <section id="stacks" className={className}>
       <AnimatedDiv>
         <div className="mb-8 text-center grid gap-4">
           <Typography variant="h2" className="text-txt-light">
@@ -34,3 +35,7 @@ export default function Skills() {
     </section>
   );
 }
+
+Skills.propTypes = {
+  className: PropTypes.string.isRequired,
+};

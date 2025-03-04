@@ -4,11 +4,12 @@ import { FaDownload } from 'react-icons/fa';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import Accounts from '../ui/Accounts';
 import data from '../../lib/personals';
+import PropTypes from 'prop-types';
 
-const HeroSection = () => {
+const HeroSection = ({ className }) => {
   return (
     <AnimatedDiv>
-      <section className="flex flex-col-reverse md:grid md:grid-cols-2 mt-32 gap-10">
+      <section className={`flex flex-col-reverse md:grid md:grid-cols-2 mt-32 gap-10 ${className}`}>
         <div className="content-center">
           <Typography variant="h2" className="text-txt-light">
             Hello, I'm
@@ -56,6 +57,10 @@ const HeroSection = () => {
       </section>
     </AnimatedDiv>
   );
+};
+
+HeroSection.propTypes = {
+  className: PropTypes.string.isRequired,
 };
 
 export default HeroSection;
