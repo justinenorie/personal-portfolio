@@ -16,6 +16,7 @@ export default function Experience({ className }) {
             <AnimatedDiv key={index}>
               <ExpCards
                 key={index}
+                image={item.companyLogo}
                 position={item.position}
                 companyName={item.companyName}
                 duration={item.duration}

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import Typography from './Typography';
-import { RiArrowDropDownLine } from 'react-icons/ri';
-import { MdOutlineAccessTimeFilled } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
+import { IoIosArrowDown } from 'react-icons/io';
+import { MdOutlineAccessTimeFilled } from 'react-icons/md';
+import { FaLocationDot } from 'react-icons/fa6';
 
 const ExpCard = ({
   image,
@@ -20,7 +20,11 @@ const ExpCard = ({
     <div className="rounded-3xl content-center bg-cards shadow-lg p-6 hover:bg-cards/50">
       <div
         className="flex justify-between items-center self-center cursor-pointer"
-        onClick={() => setIsOpen(prevState => !prevState)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen((prev) => !prev);
+        }}
+        tabIndex={0}
       >
         <div className="flex gap-6">
           <img
@@ -38,12 +42,18 @@ const ExpCard = ({
             </Typography>
 
             <div className="flex-col gap-6 items-center min-[57rem]:flex min-[57rem]:flex-row">
-              <Typography variant="small" className="text-txt-light flex gap-1.5 mb-1.5">
-                <MdOutlineAccessTimeFilled className="w-6 h-6 self-center text-primary"/>
+              <Typography
+                variant="small"
+                className="text-txt-light flex gap-1.5 mb-1.5"
+              >
+                <MdOutlineAccessTimeFilled className="w-6 h-6 self-center text-primary" />
                 {duration || 'January 1995 - December 1995'}
               </Typography>
-              <Typography variant="small" className="text-txt-light flex gap-1.5">
-                <FaLocationDot className="w-6 h-6 self-center text-primary"/>
+              <Typography
+                variant="small"
+                className="text-txt-light flex gap-1.5"
+              >
+                <FaLocationDot className="w-6 h-6 self-center text-primary" />
                 {location || 'Company Location'}
               </Typography>
             </div>
@@ -52,21 +62,24 @@ const ExpCard = ({
 
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
         >
-          <RiArrowDropDownLine className="text-txt-light w-20 h-20" />
+          <IoIosArrowDown className="text-txt-light w-20 h-20" />
         </motion.div>
       </div>
 
       <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={
-          isOpen ? { opacity: 1, height: 'auto' } : { opacity: 0, height: 0 }
+          isOpen
+            ? { opacity: 1, height: 'auto'}
+            : { opacity: 0, height: 0 }
         }
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
         className="overflow-hidden mt-4"
+        style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
-        <ul className="list-disc pl-15 text-txt-light">
+        <ul className="list-disc p-6 text-txt-light sm:pl-15">
           {description.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
