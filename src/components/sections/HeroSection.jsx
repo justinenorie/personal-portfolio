@@ -9,10 +9,12 @@ import PropTypes from 'prop-types';
 const HeroSection = ({ className }) => {
   return (
     <AnimatedDiv>
-      <section className={`flex flex-col-reverse md:grid md:grid-cols-2 mt-32 gap-10 ${className}`}>
+      <section
+        className={`flex flex-col-reverse md:grid md:grid-cols-2 mt-32 gap-10 ${className}`}
+      >
         <div className="content-center">
           <Typography variant="h2" className="text-txt-light">
-            Hello, I'm
+            {"Hello, I'm"}
           </Typography>
 
           <Typography variant="h1" className="text-txt-light py-4">
@@ -39,6 +41,7 @@ const HeroSection = ({ className }) => {
             ))}
           </div>
 
+          {/* TODO: Add the Gdrive link of my Portfolio */}
           <Button
             className="my-4 px-4 flex gap-2 items-center text-txt-dark"
             variant="primary"
