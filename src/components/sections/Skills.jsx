@@ -4,7 +4,7 @@ import tech from '../../lib/tech';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import PropTypes from 'prop-types';
 
-export default function Skills({ className }) {
+const Skills = ({ className }) => {
   return (
     <section id="stacks" className={className}>
       <AnimatedDiv>
@@ -35,6 +35,8 @@ export default function Skills({ className }) {
     </section>
   );
 }
+
+export default Skills;
 
 Skills.propTypes = {
   className: PropTypes.string.isRequired,

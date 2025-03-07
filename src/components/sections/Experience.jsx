@@ -4,10 +4,11 @@ import ExpCards from '../ui/ExpCards';
 import data from '../../lib/personals';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 
-export default function Experience({ className }) {
+const Experience = ({ className }) => {
   return (
     <section id="experiences" className={className}>
       <AnimatedDiv>
+        {/* TODO: Add Education */}
         <Typography variant="h2" className="text-txt-light text-center mb-8">
           Experience
         </Typography>
@@ -30,6 +31,8 @@ export default function Experience({ className }) {
     </section>
   );
 }
+
+export default Experience;
 
 Experience.propTypes = {
   className: PropTypes.string.isRequired,

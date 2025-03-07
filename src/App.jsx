@@ -5,9 +5,10 @@ import TopBar from '@/components/sections/TopBar';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
+import Contacts from './components/sections/Contacts';
 import Footer from './components/sections/Footer';
 
-function App() {
+const App = () => {
   const ref = useRef(null);
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
 
@@ -25,7 +26,7 @@ function App() {
     }
   }, []);
 
-  const sections = [HeroSection, Skills, Projects, Experience];
+  const sections = [HeroSection, Skills, Projects, Experience, Contacts];
 
   return (
     <div>

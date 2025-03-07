@@ -4,7 +4,7 @@ import projects from '../../lib/projects';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import PropTypes from 'prop-types';
 
-export default function Projects({ className }) {
+const Projects = ({ className }) => {
   return (
     <AnimatedDiv>
       <section id="projects" className={className}>
@@ -38,6 +38,8 @@ export default function Projects({ className }) {
     </AnimatedDiv>
   );
 }
+
+export default Projects;
 
 Projects.propTypes = {
   className: PropTypes.string.isRequired,
