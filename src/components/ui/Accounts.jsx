@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const Accounts = ({ Icon, link }) => {
+const Accounts = ({ Icon, link, className }) => {
   return (
     <a href={link}>
-      <Icon className="h-10 w-10 text-txt-light " />
+      <Icon className={`${className} text-txt-light`} />
     </a>
   );
 };
@@ -11,6 +11,7 @@ const Accounts = ({ Icon, link }) => {
 Accounts.propTypes = {
   Icon: PropTypes.elementType.isRequired,
   link: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Accounts;

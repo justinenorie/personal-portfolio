@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
  * @returns {ReactElement} The button element
  */
 
-const Button = ({ children, className = '', variant = 'primary', ...props }) => {
+const Button = ({ children, className = '', variant = 'primary', type, ...props }) => {
   const baseStyles = {
     primary: 'bg-primary text-txt-dark hover:bg-primary/50',
     secondary: 'bg-secondary text-txt-light hover:bg-secondary/90',
@@ -19,8 +19,8 @@ const Button = ({ children, className = '', variant = 'primary', ...props }) => 
 
   return (
     <button
-      type="button"
-      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md transition-transform duration-300 hover:scale-110 cursor-pointer focus:scale-110 active:scale-110 ${className}`}
+      type={type}
+      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md cursor-pointer ${className}`}
       {...props}
     >
       {children}
@@ -31,6 +31,7 @@ const Button = ({ children, className = '', variant = 'primary', ...props }) => 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  type: PropTypes.string,
   variant: PropTypes.oneOf(['primary', 'secondary', 'accent', 'transparent']),
 };
 

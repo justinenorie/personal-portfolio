@@ -1,23 +1,75 @@
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaFreeCodeCamp, FaSkype } from 'react-icons/fa';
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
+// Three Main Contact Accounts
 const myAccounts = [
   {
     icon: FaGithub,
-    link: "https://github.com/",
+    link: "https://github.com/justinenorie",
     name: "Github"
   },
   {
-    icon: FaGithub,
+    icon: FaLinkedin,
     link: "https://github.com/",
-    name: "Github"
+    name: "Linkedin"
   },
   {
-    icon: FaGithub,
-    link: "https://github.com/",
-    name: "Github"
+    icon: MdEmail,
+    link: "mailto:justinedelacruz97@gmail.com",
+    name: "Gmail"
   }
 ];
 
+// Any Accounts here
+const otherSocials = [
+  {
+    icon: FaFacebook,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaFreeCodeCamp,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaSkype,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+  {
+    icon: FaGithub,
+    link: "https://github.com/",
+  },
+]
+
+// Experience tab here
 const experience = [
   {
     companyLogo: "",
@@ -39,6 +91,7 @@ const experience = [
 
 const data = {
   myAccounts,
+  otherSocials,
   experience
 };
 

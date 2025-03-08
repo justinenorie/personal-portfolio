@@ -1,28 +1,120 @@
 import Typography from '../ui/Typography';
 import PropTypes from 'prop-types';
+import Accounts from '../ui/Accounts';
+import data from '../../lib/personals';
+import Button from '../ui/Button';
 
 const Contacts = ({ className }) => {
   return (
-    <section id="contacts" className={`${className}`}>
-      <div className="grid gap-4">
-        <Typography variant="h2" className="text-txt-light text-center">
-          Contacts
-        </Typography>
-        <Typography variant="p" className="text-txt-light text-center">
-          Feel free to reach out for collaboration or inquiries!
-        </Typography>
-      </div>
+    <section id="contacts" className={`${className} space-y-5`}>
+      <div className="grid md:grid-cols-2 gap-12 items-start content-center">
+        <div className="space-y-4">
+          <Typography
+            variant="h2"
+            className="text-txt-light text-center md:text-left"
+          >
+            Contacts
+          </Typography>
+          <Typography
+            variant="p"
+            className="text-txt-light text-center md:text-left"
+          >
+            Feel free to reach out for collaboration or inquiries!
+          </Typography>
 
-      <div>
-        <Typography variant="p" className="text-txt-light">
-          
-        </Typography>
+          <div className="grid grid-cols-1 min-[100rem]:grid-cols-2 gap-4">
+            {data.myAccounts.map(({ icon, link, name }, index) => {
+              const linkText = link
+                .replace(/^https?:\/\/[^/]+/, '')
+                .replace('mailto:', '');
+              return (
+                <a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 border border-txt-light rounded-lg bg-cards w-full"
+                >
+                  <Accounts Icon={icon} link={link} className="w-10 h-10" />
+                  <div>
+                    <Typography
+                      variant="p"
+                      className="text-txt-light font-semibold"
+                    >
+                      {name}
+                    </Typography>
+                    <Typography variant="small" className="text-txt-light">
+                      {linkText}
+                    </Typography>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start pt-10 md:pt-0">
+            {data.otherSocials.map(({ icon, link }, index) => (
+              <Accounts
+                key={index}
+                Icon={icon}
+                link={link}
+                className="w-7 h-7"
+              />
+            ))}
+          </div>
+        </div>
+
+        <form
+          action=""
+          className="bg-cards/50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 space-y-6 items-center rounded-lg p-6 h-full"
+        >
+          <Typography variant="p" className="text-txt-light">
+            Feel free to get in touch!
+          </Typography>
+
+          <Typography
+            variant="small"
+            className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+          >
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full outline-none"
+            />
+          </Typography>
+
+          <Typography
+            variant="small"
+            className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+          >
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="Your Email"
+              className="w-full outline-none"
+            />
+          </Typography>
+
+          <Typography
+            variant="small"
+            className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg p-4 h-40"
+          >
+            <textarea
+              name=""
+              id=""
+              placeholder="Type Your Message"
+              className="size-full outline-none resize-none"
+            ></textarea>
+          </Typography>
+
+          <Button className="rounded-lg w-full text-txt-dark" type="submit">
+            Send Message
+          </Button>
+        </form>
       </div>
     </section>
-
-    
   );
-}
+};
 
 export default Contacts;
 
