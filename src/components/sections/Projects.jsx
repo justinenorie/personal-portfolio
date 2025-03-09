@@ -1,8 +1,9 @@
 import Typography from '../ui/Typography';
 import ProjectsBox from '../ui/ProjectBox';
-import projects from '../../lib/projects';
+// import projects from '../../lib/projects';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import PropTypes from 'prop-types';
+import data from '../../lib/personalData';
 
 const Projects = ({ className }) => {
   return (
@@ -20,7 +21,7 @@ const Projects = ({ className }) => {
         </div>
 
         <div className="grid gap-5">
-          {projects.map((item, index) => (
+          {data.projects.map((item, index) => (
             <AnimatedDiv key={index}>
               <ProjectsBox
                 key={index}

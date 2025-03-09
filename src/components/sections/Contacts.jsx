@@ -1,7 +1,7 @@
 import Typography from '../ui/Typography';
 import PropTypes from 'prop-types';
 import Accounts from '../ui/Accounts';
-import data from '../../lib/personals';
+import data from '../../lib/personalData';
 import Button from '../ui/Button';
 
 const Contacts = ({ className }) => {

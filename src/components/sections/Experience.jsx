@@ -1,7 +1,7 @@
 import Typography from '../ui/Typography';
 import PropTypes from 'prop-types';
 import ExpCards from '../ui/ExpCards';
-import data from '../../lib/personals';
+import data from '../../lib/personalData';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 
 const Experience = ({ className }) => {

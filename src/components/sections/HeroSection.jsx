@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 import { FaDownload } from 'react-icons/fa';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import Accounts from '../ui/Accounts';
-import data from '../../lib/personals';
+import data from '../../lib/personalData';
 import PropTypes from 'prop-types';
 
 const HeroSection = ({ className }) => {

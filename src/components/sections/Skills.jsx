@@ -1,6 +1,7 @@
 import Typography from '../ui/Typography';
 import TechStacks from '../ui/TechStacks';
-import tech from '../../lib/tech';
+// import tech from '../../lib/tech';
+import data from '../../lib/personalData';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import PropTypes from 'prop-types';
 
@@ -17,7 +18,7 @@ const Skills = ({ className }) => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap10 gap-5">
-          {tech.map((item, index) => (
+          {data.techStacks.map((item, index) => (
             <AnimatedDiv key={index}>
               <TechStacks
                 key={index}

@@ -1,4 +1,8 @@
-import { FaGithub, FaFacebook, FaFreeCodeCamp, FaSkype } from 'react-icons/fa';
+// Icon Imports Here from React Icons
+import { FaGithub, FaFacebook, FaFreeCodeCamp, FaSkype, FaReact, FaNodeJs, FaCss3Alt, FaHtml5, FaGitAlt } from 'react-icons/fa';
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiExpress, SiMongodb } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -21,7 +25,7 @@ const myAccounts = [
   }
 ];
 
-// Any Accounts here
+// Any Other Accounts Here 
 const otherSocials = [
   {
     icon: FaFacebook,
@@ -45,7 +49,27 @@ const otherSocials = [
   },
 ]
 
-// Experience tab here
+// My Projects Data 
+const projects = [
+  {
+    image: "/Rectangle.svg",
+    projectName: "Project",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis quam nec nisi ultrices, quis aliquet tortor dictum. Nam sed vestibulum magna. Nulla varius odio et sapien efficitur, id varius mauris gravida. ",
+    githubLink: "https://github.com/justinenorie",
+    webAppURL: "https://vercel.com/justinenories-projects",
+    techStacks: ["JavaScript", "NodeJS", "MongoDB", "ReactJS"]
+  },
+  {
+    image: "/Rectangle.svg",
+    projectName: "Project",
+    description: "Description",
+    githubLink: "https://github.com/justinenorie",
+    webAppURL: "https://vercel.com/justinenories-projects",
+    techStacks: ["JavaScript", "NodeJS", "ExpressJS"]
+  },
+];
+
+// Experience Data
 const experience = [
   {
     companyLogo: "",
@@ -65,10 +89,26 @@ const experience = [
   },
 ];
 
+const techStacks = [
+  { icon: FaHtml5, name: "HTML", color: "#E34F26" },
+  { icon: FaCss3Alt, name: "CSS", color: "#254ADC" },
+  { icon: IoLogoJavascript, name: "JavaScript", color: "#FFD600" },
+  { icon: RiTailwindCssFill, name: "Tailwind CSS", color: "#38BDF8" },
+  { icon: FaReact, name: "ReactJS", color: "#61DBFB" },
+  { icon: FaReact, name: "React Native", color: "#61DBFB" },
+  { icon: FaNodeJs, name: "NodeJS", color: "#68A063" },
+  { icon: SiExpress, name: "ExpressJS", color: "#828282" },
+  { icon: SiMongodb, name: "MongoDB", color: "#01F365" },
+  { icon: FaGithub, name: "GitHub", color: "#fefffe" },
+  { icon: FaGitAlt, name: "Git", color: "#F05032" },
+];
+
 const data = {
   myAccounts,
   otherSocials,
-  experience
+  techStacks,
+  projects,
+  experience,
 };
 
 export default data;
