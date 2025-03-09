@@ -30,7 +30,7 @@ const Experience = ({ className }) => {
       </AnimatedDiv>
     </section>
   );
-}
+};
 
 export default Experience;
 

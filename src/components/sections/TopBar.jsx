@@ -12,7 +12,9 @@ const TopBar = () => {
             >
               Justine
             </Typography>
-            <Typography variant="p" className="text-primary">Norie</Typography>
+            <Typography variant="p" className="text-primary">
+              Norie
+            </Typography>
           </a>
         </div>
 

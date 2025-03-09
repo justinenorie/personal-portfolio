@@ -71,13 +71,11 @@ const ExpCard = ({
       <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={
-          isOpen
-            ? { opacity: 1, height: 'auto'}
-            : { opacity: 0, height: 0 }
+          isOpen ? { opacity: 1, height: 'auto' } : { opacity: 0, height: 0 }
         }
         transition={{ duration: 0.5 }}
         className="overflow-hidden mt-4"
-        style={{ pointerEvents: isOpen ? "auto" : "none" }}
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       >
         <ul className="list-disc p-6 text-txt-light sm:pl-15">
           {description.map((item, index) => (

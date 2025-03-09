@@ -34,11 +34,7 @@ const App = () => {
       {sections.map((Section, index) => (
         <Section
           key={index}
-          className={
-            index % 2 === 0
-              ? 'bg-background'
-              : 'bg-background-alt'
-          }
+          className={index % 2 === 0 ? 'bg-background' : 'bg-background-alt'}
         />
       ))}
       <Footer />
@@ -52,6 +48,6 @@ const App = () => {
       />
     </div>
   );
-}
+};
 
 export default App;

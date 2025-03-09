@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Typography from './Typography';
 import TechStacks from './TechStacks';
-import techList from '../../lib/tech';
+import data from '../../lib/personalData';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectBox = ({
@@ -15,7 +15,7 @@ const ProjectBox = ({
 }) => {
   const matchedTechStacks = techStacks
     .map((tech) =>
-      techList.find((t) => t.name.toLowerCase() === tech.toLowerCase())
+      data.techStacks.find((t) => t.name.toLowerCase() === tech.toLowerCase())
     )
     .filter(Boolean);
 

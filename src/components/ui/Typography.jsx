@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
  * @param {String} children The text to be displayed or rendered
  * @param {String} className for custome styles classnames to be applied to the component
  * @returns {ReactElement} results to be displayed
-*/
+ */
 
 const Typography = ({ variant, children, className = '' }) => {
   const baseStyles = {

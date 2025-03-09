@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 const AnimatedDiv = ({ children, className }) => {
   return (
@@ -11,7 +11,7 @@ const AnimatedDiv = ({ children, className }) => {
         hidden: { opacity: 0, x: -100 }, // Start hidden and slide in from the left
         visible: { opacity: 1, x: 0 }, // Fade in and slide to position
       }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
       viewport={{ once: false, amount: 0.1 }}
       className={className}
     >
@@ -26,4 +26,3 @@ AnimatedDiv.propTypes = {
 };
 
 export default AnimatedDiv;
-

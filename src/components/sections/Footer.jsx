@@ -10,10 +10,11 @@ const Footer = () => {
       <Typography variant="small" className="text-txt-light text-center">
         Built with <strong className="text-accent">React.js</strong> and{' '}
         <strong className="text-accent">Tailwind CSS</strong> using{' '}
-        <strong className="text-accent">Vite</strong>, hosted on <strong className="text-accent">Vercel</strong>.
+        <strong className="text-accent">Vite</strong>, hosted on{' '}
+        <strong className="text-accent">Vercel</strong>.
       </Typography>
     </div>
   );
-}
+};
 
 export default Footer;

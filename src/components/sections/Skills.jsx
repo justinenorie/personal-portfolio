@@ -1,6 +1,5 @@
 import Typography from '../ui/Typography';
 import TechStacks from '../ui/TechStacks';
-// import tech from '../../lib/tech';
 import data from '../../lib/personalData';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import PropTypes from 'prop-types';
@@ -14,7 +13,10 @@ const Skills = ({ className }) => {
             My Tech Stacks
           </Typography>
 
-          <Typography variant="p" className="text-txt-light">Here are the tech stacks that I have used, have knowledge about, and have experience with.</Typography>
+          <Typography variant="p" className="text-txt-light">
+            Here are the tech stacks that I have used, have knowledge about, and
+            have experience with.
+          </Typography>
         </div>
 
         <div className="grid sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap10 gap-5">
@@ -35,7 +37,7 @@ const Skills = ({ className }) => {
       </AnimatedDiv>
     </section>
   );
-}
+};
 
 export default Skills;
 

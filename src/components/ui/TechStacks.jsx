@@ -1,11 +1,20 @@
-import PropTypes from "prop-types";
-import Typography from "./Typography";
+import PropTypes from 'prop-types';
+import Typography from './Typography';
 
-const TechStacks = ({ Icon, techName, color,  techStyle, iconStyle, variant }) => {
+const TechStacks = ({
+  Icon,
+  techName,
+  color,
+  techStyle,
+  iconStyle,
+  variant,
+}) => {
   return (
     <div className={`flex rounded-lg hover:cursor-default ${techStyle}`}>
       <Icon className={`${iconStyle}`} style={{ color }} />
-      <Typography variant={variant} className="text-txt-light">{techName}</Typography>
+      <Typography variant={variant} className="text-txt-light">
+        {techName}
+      </Typography>
     </div>
   );
 };

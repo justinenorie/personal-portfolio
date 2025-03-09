@@ -9,7 +9,13 @@ import PropTypes from 'prop-types';
  * @returns {ReactElement} The button element
  */
 
-const Button = ({ children, className = '', variant = 'primary', type, ...props }) => {
+const Button = ({
+  children,
+  className = '',
+  variant = 'primary',
+  type,
+  ...props
+}) => {
   const baseStyles = {
     primary: 'bg-primary text-txt-dark hover:bg-primary/50',
     secondary: 'bg-secondary text-txt-light hover:bg-secondary/90',
@@ -36,4 +42,3 @@ Button.propTypes = {
 };
 
 export default Button;
-

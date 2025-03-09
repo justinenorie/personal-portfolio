@@ -1,6 +1,5 @@
 import Typography from '../ui/Typography';
 import ProjectsBox from '../ui/ProjectBox';
-// import projects from '../../lib/projects';
 import AnimatedDiv from '../../utils/AnimatedDiv';
 import PropTypes from 'prop-types';
 import data from '../../lib/personalData';
@@ -38,7 +37,7 @@ const Projects = ({ className }) => {
       </section>
     </AnimatedDiv>
   );
-}
+};
 
 export default Projects;
 

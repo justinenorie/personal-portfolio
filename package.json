@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview": "vite preview",
-    "host" : "vite --host"
+    "host": "vite --host"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
