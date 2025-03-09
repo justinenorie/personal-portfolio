@@ -26,46 +26,22 @@ const otherSocials = [
   {
     icon: FaFacebook,
     link: "https://github.com/",
+    name: "Facebook"
   },
   {
     icon: FaFreeCodeCamp,
     link: "https://github.com/",
+    name: "FreeCodeCamp"
   },
   {
     icon: FaSkype,
     link: "https://github.com/",
+    name: "Skype"
   },
   {
-    icon: FaGithub,
+    icon: FaSkype,
     link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/",
+    name: "Skype"
   },
 ]
 

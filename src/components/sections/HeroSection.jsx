@@ -37,13 +37,21 @@ const HeroSection = ({ className }) => {
 
           <div className="flex flex-col md:flex-row gap-5">
             <div className="flex gap-5">
-              {data.myAccounts.map(({ icon, link }, index) => (
-                <Accounts
-                  key={index}
-                  Icon={icon}
-                  link={link}
-                  className="w-10 h-10"
-                />
+              {data.myAccounts.map(({ icon, link, name }, index) => (
+                <div className="relative group" key={index}>
+                  <Accounts
+                    key={index}
+                    Icon={icon}
+                    link={link}
+                    className="w-10 h-10 text-txt-light hover:text-accent transition-transform hover:scale-120 duration-300"
+                  />
+                  <Typography
+                    variant="small"
+                    className="absolute top-8 hidden group-hover:block bg-accent/50 text-txt-light px-2 py-1 rounded-lg z-10 pointer-events-none"
+                  >
+                    {name}
+                  </Typography>
+                </div>
               ))}
             </div>
           </div>

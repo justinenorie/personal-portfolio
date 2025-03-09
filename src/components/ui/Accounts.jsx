@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Accounts = ({ Icon, link, className }) => {
   return (
     <a href={link}>
-      <Icon className={`${className} text-txt-light`} />
+      <Icon className={`${className}`} />
     </a>
   );
 };
