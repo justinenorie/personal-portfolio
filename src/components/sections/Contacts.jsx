@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import Accounts from '../ui/Accounts';
 import data from '../../lib/personalData';
 import Button from '../ui/Button';
+import AnimatedDiv from '../../utils/AnimatedDiv';
 
 const Contacts = ({ className }) => {
   return (
     <section id="contacts" className={`${className} space-y-5`}>
       <div className="grid md:grid-cols-2 gap-12 items-start content-center">
-        <div className="space-y-4">
+        <AnimatedDiv className="space-y-4">
           <Typography
             variant="h2"
             className="text-txt-light text-center md:text-left"
@@ -72,61 +73,63 @@ const Contacts = ({ className }) => {
               </div>
             ))}
           </div>
-        </div>
+        </AnimatedDiv>
 
-        <form
-          action="https://formsubmit.co/0a98ae599e76abb23bc0dc92225ab19c"
-          method="POST"
-          className="bg-cards/50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 space-y-6 items-center rounded-lg p-6 h-full"
-        >
-          <Typography variant="p" className="text-txt-light">
-            Feel free to get in touch!
-          </Typography>
-
-          <Typography
-            variant="small"
-            className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+        <AnimatedDiv>
+          <form
+            action="https://formsubmit.co/0a98ae599e76abb23bc0dc92225ab19c"
+            method="POST"
+            className="bg-cards/50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 space-y-6 items-center rounded-lg p-6 h-full"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              className="w-full outline-none"
-              autoComplete="off"
-              required
-            />
-          </Typography>
+            <Typography variant="p" className="text-txt-light">
+              Feel free to get in touch!
+            </Typography>
 
-          <Typography
-            variant="small"
-            className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="w-full outline-none"
-              autoComplete="off"
-              required
-            />
-          </Typography>
+            <Typography
+              variant="small"
+              className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="w-full outline-none"
+                autoComplete="off"
+                required
+              />
+            </Typography>
 
-          <Typography
-            variant="small"
-            className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg p-4 h-40"
-          >
-            <textarea
-              name="message"
-              placeholder="Type Your Message"
-              className="size-full outline-none resize-none"
-              required
-            ></textarea>
-          </Typography>
+            <Typography
+              variant="small"
+              className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="w-full outline-none"
+                autoComplete="off"
+                required
+              />
+            </Typography>
 
-          <Button className="rounded-lg w-full text-txt-dark" type="submit">
-            Send Message
-          </Button>
-        </form>
+            <Typography
+              variant="small"
+              className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg p-4 h-40"
+            >
+              <textarea
+                name="message"
+                placeholder="Type Your Message"
+                className="size-full outline-none resize-none"
+                required
+              ></textarea>
+            </Typography>
+
+            <Button className="rounded-lg w-full text-txt-dark" type="submit">
+              Send Message
+            </Button>
+          </form>
+        </AnimatedDiv>
       </div>
     </section>
   );
