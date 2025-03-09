@@ -44,4 +44,6 @@ This will start a local development server.
 
 ## **License**
 
-This project is open-source and available under the **MIT License**.
+This project is open-source and available under the <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer"><strong>MIT License</strong></a>.
+
+Copyright &copy; 2025 Justine Norie Dela Cruz. All rights reserved.
