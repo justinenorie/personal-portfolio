@@ -22,33 +22,31 @@ const ProjectBox = ({
   const [isTouched, setIsTouched] = useState(false);
 
   return (
-    <div className="grid md:grid-cols-2 gap-10 bg-cards p-5 items-center rounded-3xl shadow-md transition-transform duration-300 hover:scale-105">
+    <div className="bg-cards grid items-center gap-10 rounded-3xl p-5 shadow-md transition-transform duration-300 hover:scale-105 md:grid-cols-2">
       <a
         href={websiteLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="transition-transform duration-300 hover:scale-103 relative group"
+        className="group relative transition-transform duration-300 hover:scale-103"
         onTouchStart={() => setIsTouched(true)}
         onTouchEnd={() => setTimeout(() => setIsTouched(false), 2000)}
       >
         <img
-          className="w-full h-80 object-cover rounded-2xl"
+          className="h-80 w-full rounded-2xl object-cover"
           src={image || '/Rectangle.svg'}
           alt={projectName}
         />
         <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-        opacity-0 group-hover:opacity-100 ${isTouched ? 'opacity-100' : ''} 
-        transition-opacity duration-300 z-50`}
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0 group-hover:opacity-100 ${isTouched ? 'opacity-100' : ''} z-50 transition-opacity duration-300`}
         >
           <Typography variant="p" className="text-txt-dark">
             Visit
           </Typography>
-          <FaExternalLinkAlt className="w-9 h-9 text-txt-dark" />
+          <FaExternalLinkAlt className="text-txt-dark h-9 w-9" />
         </div>
       </a>
 
-      <div className="content-center grid gap-5 hover:cursor-default">
+      <div className="grid content-center gap-5 hover:cursor-default">
         <div className="flex items-center gap-3">
           <Typography variant="h3" className="text-txt-light">
             {projectName || 'Project Name'}
@@ -61,7 +59,7 @@ const ProjectBox = ({
             className="transition-transform duration-300 hover:scale-150"
           >
             {/* <div className="absolute animate-ping bg-accent w-9 h-9 rounded-full"></div> */}
-            <FaGithub color="#fefffe" className="w-9 h-9" />
+            <FaGithub color="#fefffe" className="h-9 w-9" />
           </a>
         </div>
 
@@ -69,7 +67,7 @@ const ProjectBox = ({
           {description || 'Description'}
         </Typography>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 min-[70rem]:grid-cols-3 min-[100rem]:grid-cols-4 gap-2 mt-2">
+        <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2 min-[70rem]:grid-cols-3 min-[100rem]:grid-cols-4">
           {matchedTechStacks.map((tech, index) => (
             <TechStacks
               key={index}

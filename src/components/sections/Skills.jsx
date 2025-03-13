@@ -8,7 +8,7 @@ const Skills = ({ className }) => {
   return (
     <section id="stacks" className={className}>
       <AnimatedDiv>
-        <div className="mb-8 text-center grid gap-4">
+        <div className="mb-8 grid gap-4 text-center">
           <Typography variant="h2" className="text-txt-light">
             My Tech Stacks
           </Typography>
@@ -19,7 +19,7 @@ const Skills = ({ className }) => {
           </Typography>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap10 gap-5">
+        <div className="lg:gap10 grid gap-5 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {data.techStacks.map((item, index) => (
             <AnimatedDiv key={index}>
               <TechStacks

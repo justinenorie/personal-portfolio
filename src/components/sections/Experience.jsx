@@ -9,7 +9,7 @@ const Experience = ({ className }) => {
     <section id="experiences" className={className}>
       <AnimatedDiv>
         {/* TODO: Add Education */}
-        <Typography variant="h2" className="text-txt-light text-center mb-8">
+        <Typography variant="h2" className="text-txt-light mb-8 text-center">
           Experience
         </Typography>
         <div className="grid gap-5">

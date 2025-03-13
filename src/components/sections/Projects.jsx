@@ -8,7 +8,7 @@ const Projects = ({ className }) => {
   return (
     <AnimatedDiv>
       <section id="projects" className={className}>
-        <div className="mb-8 text-center grid gap-4">
+        <div className="mb-8 grid gap-4 text-center">
           <Typography variant="h2" className="text-txt-light">
             Projects
           </Typography>

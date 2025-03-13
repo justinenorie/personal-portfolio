@@ -26,7 +26,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${baseStyles[variant]} font-bold py-2.5 px-4 rounded-md cursor-pointer ${className}`}
+      className={`${baseStyles[variant]} cursor-pointer rounded-md px-4 py-2.5 font-bold ${className}`}
       {...props}
     >
       {children}

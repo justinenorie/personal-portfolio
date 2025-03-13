@@ -8,7 +8,7 @@ import AnimatedDiv from '../../utils/AnimatedDiv';
 const Contacts = ({ className }) => {
   return (
     <section id="contacts" className={`${className} space-y-5`}>
-      <div className="grid md:grid-cols-2 gap-12 items-start content-center">
+      <div className="grid content-center items-start gap-12 md:grid-cols-2">
         <AnimatedDiv className="space-y-4">
           <Typography
             variant="h2"
@@ -23,7 +23,7 @@ const Contacts = ({ className }) => {
             Feel free to reach out for collaboration or inquiries!
           </Typography>
 
-          <div className="grid grid-cols-1 min-[100rem]:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 min-[100rem]:grid-cols-2">
             {data.myAccounts.map(({ icon, link, name }, index) => {
               const linkText = link
                 .replace(/^https?:\/\/[^/]+/, '')
@@ -34,12 +34,12 @@ const Contacts = ({ className }) => {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-lg bg-cards w-full hover:bg-accent/50 transition-transform hover:scale-104 duration-300"
+                  className="bg-cards hover:bg-accent/50 flex w-full items-center gap-4 rounded-lg p-4 transition-transform duration-300 hover:scale-104"
                 >
                   <Accounts
                     Icon={icon}
                     link={link}
-                    className="w-10 h-10 text-txt-light"
+                    className="text-txt-light h-10 w-10"
                   />
                   <div>
                     <Typography
@@ -56,17 +56,17 @@ const Contacts = ({ className }) => {
               );
             })}
           </div>
-          <div className="flex flex-wrap gap-5 justify-center md:justify-start pt-5 md:pt-0">
+          <div className="flex flex-wrap justify-center gap-5 pt-5 md:justify-start md:pt-0">
             {data.otherSocials.map(({ icon, link, name }, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="group relative">
                 <Accounts
                   Icon={icon}
                   link={link}
-                  className="w-7 h-7 text-txt-light hover:text-accent transition-transform hover:scale-120 duration-300"
+                  className="text-txt-light hover:text-accent h-7 w-7 transition-transform duration-300 hover:scale-120"
                 />
                 <Typography
                   variant="small"
-                  className="absolute top-8 hidden group-hover:block bg-accent/50 text-txt-light px-2 py-1 rounded-lg z-10 pointer-events-none"
+                  className="bg-accent/50 text-txt-light pointer-events-none absolute top-8 z-10 hidden rounded-lg px-2 py-1 group-hover:block"
                 >
                   {name}
                 </Typography>
@@ -79,7 +79,7 @@ const Contacts = ({ className }) => {
           <form
             action="https://formsubmit.co/0a98ae599e76abb23bc0dc92225ab19c"
             method="POST"
-            className="bg-cards/50 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 space-y-6 items-center rounded-lg p-6 h-full"
+            className="bg-cards/50 bg-opacity-10 h-full items-center space-y-6 rounded-lg bg-clip-padding p-6 backdrop-blur-sm backdrop-filter"
           >
             <Typography variant="p" className="text-txt-light">
               Feel free to get in touch!
@@ -87,7 +87,7 @@ const Contacts = ({ className }) => {
 
             <Typography
               variant="small"
-              className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+              className="bg-cards/70 bg-opacity-10 text-txt-light content-center rounded-lg bg-clip-padding p-4 backdrop-blur-sm backdrop-filter"
             >
               <input
                 type="text"
@@ -101,7 +101,7 @@ const Contacts = ({ className }) => {
 
             <Typography
               variant="small"
-              className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg content-center p-4"
+              className="bg-cards/70 bg-opacity-10 text-txt-light content-center rounded-lg bg-clip-padding p-4 backdrop-blur-sm backdrop-filter"
             >
               <input
                 type="email"
@@ -115,17 +115,17 @@ const Contacts = ({ className }) => {
 
             <Typography
               variant="small"
-              className="bg-cards/70 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-txt-light rounded-lg p-4 h-40"
+              className="bg-cards/70 bg-opacity-10 text-txt-light h-40 rounded-lg bg-clip-padding p-4 backdrop-blur-sm backdrop-filter"
             >
               <textarea
                 name="message"
                 placeholder="Type Your Message"
-                className="size-full outline-none resize-none"
+                className="size-full resize-none outline-none"
                 required
               ></textarea>
             </Typography>
 
-            <Button className="rounded-lg w-full text-txt-dark" type="submit">
+            <Button className="text-txt-dark w-full rounded-lg" type="submit">
               Send Message
             </Button>
           </form>

@@ -40,7 +40,7 @@ const App = () => {
       <Footer />
       <motion.div
         ref={ref}
-        className="fixed h-30 w-30 blur-3xl bg-accent rounded-full shadow-lg z-10 pointer-events-none"
+        className="bg-accent pointer-events-none fixed z-10 h-30 w-30 rounded-full shadow-lg blur-3xl"
         animate={{ x: coordinates.x, y: coordinates.y }}
         transition={{
           type: 'spring',
